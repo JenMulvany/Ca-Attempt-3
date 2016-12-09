@@ -22,7 +22,8 @@ export class PartBComponent{
     feet : number = 0;
     inches : number = 0;
     orMeters : number =0;
-    bmi : number = 0;
+    bmi : number= 0;
+    bmiC : string ="";
 StoneToKgs() {
     this.orKgs = this.stone * 6.35029318 ;
   }
@@ -49,9 +50,18 @@ orMetersTofeetAndInches(){
 
 
 BMICalculations() {
-  this.bmi = this.orKgs / this.orMeters^2;
+ 
 
+       this.bmi = this.orKgs / (this.orMeters*this.orMeters);
+   
+
+      if(this.bmi < 18.5) { "Underweight";}
+      if(this.bmi <25){"Normal";}
+      if(this.bmi <30){"overwieght";}
+       if(this.bmi >30){"Obese";}
+      
 }
+
 }
   
   

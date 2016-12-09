@@ -1,3 +1,4 @@
+<div class = "container">
  <div class ="jumbotron" align=center>
     <h2>BMI Calculator</h2>
 
@@ -45,11 +46,20 @@
             </div>
             </div>
         </div>
-        <div ng-app="" ng-init="orKgs=1;orMeters=10">
+        <p>
+  <button (click)="BMICalculations()">Calculate BMI</button>
+</p>
 
-           <input id="Bmi" type="submit" class="btn btn-qubico" value="Calculate Your BMI Now"> 
-         <h3>BMI Result</h3>
+     
+      
 
-</div>
+<p>Your BMI is :{{bmi}}</p>
+
+
+           
+           
+        
+
         
 </form>
+</div>
