@@ -31,7 +31,7 @@ StoneAndPoundToKgs(){
 orKgsToStoneAndPound() {
   
   this.stone = Math.floor(this.orKgs * 2.2046226218/14 );
-  this.pounds = ((this.orKgs * 2.2046226218/14 ) -Math.floor(this.orKgs * 2.2046226218/14 ) )* (6.35029318 *2.2046226218 )  ;
+  this.pounds = Math.round(((this.orKgs * 2.2046226218/14 ) -Math.floor(this.orKgs * 2.2046226218/14 ) )* (6.35029318 *2.2046226218 ) ) ;
 }
  
  feetToMeters(){
@@ -42,8 +42,8 @@ feetAndInchesToMeters(){
   this.orMeters = this.feet * 0.3048 + this.inches * 0.0254;
 }
 orMetersTofeetAndInches(){ 
-  this.feet = Math.round(this.orMeters * 3.28084);
-  this.inches = this.orMeters %12 /  39.7;
+  this.feet = Math.floor(this.orMeters * 3.28084);
+  this.inches = Math.round((this.orMeters * 39.7 / 12) -  Math.floor(this.orMeters * 3.28084) * (Math.round(0.3048 *  0.0254))) ;
 }
 }
   
