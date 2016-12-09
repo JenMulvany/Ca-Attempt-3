@@ -55,10 +55,10 @@ BMICalculations() {
        this.bmi = this.orKgs / (this.orMeters*this.orMeters);
    
 
-      if(this.bmi < 18.5) { "Underweight";}
-      if(this.bmi <25){"Normal";}
-      if(this.bmi <30){"overwieght";}
-       if(this.bmi >30){"Obese";}
+      if(this.bmi <= 18.5){ this.bmiC = "Underweight";}
+      if(this.bmi >18.5 && this.bmi <=25){this.bmiC ="Normal";}
+      if(this.bmi >25 && this.bmi <=30){this.bmiC ="overwieght";}
+        if(this.bmi >30){this.bmiC ="Obese";}
       
 }
 
